@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+bool ps(ll x)
+{
+    ll s=sqrt(x);
+    return s*s==x;
+}
+bool fib(ll n)
+{
+    return (ps(5*n*n+4) || ps(5*n*n-4));
+}
+int main() {
+	ll t,n;
+	cin>>t;
+	while(t--)
+	{
+	    cin>>n;
+	   bool f=fib(n);
+	    if(f==true)
+	    cout<<"Yes\n";
+	    else
+	    cout<<"No\n";
+	}
+}
